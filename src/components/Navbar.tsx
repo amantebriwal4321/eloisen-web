@@ -42,7 +42,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="absolute left-1/2 transform -translate-x-1/2 flex items-center justify-center pt-2">
           <Image
-            src="/logo1_nav.png"
+            src="/logo.png"
             alt="Eloisen Brand Logo"
             width={300}
             height={100}
