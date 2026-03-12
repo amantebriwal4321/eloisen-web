@@ -134,7 +134,7 @@ export default function CinematicCollection() {
       {/* Full Width Cinematic Background */}
       <div className="absolute inset-0 pointer-events-none z-0" ref={imageWrapperRef}>
         <Image
-          src="/imgw.png"
+          src="/img2.png"
           alt="Eloisen Candle"
           fill
           className="object-cover"
