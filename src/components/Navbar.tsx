@@ -29,14 +29,14 @@ export default function Navbar() {
     >
       <div className="w-full px-6 md:px-12 lg:px-20 flex items-center justify-between">
         {/* Mobile Menu Icon */}
-        <button className="md:hidden text-eloisen-green focus:outline-none">
+        <button aria-label="Toggle mobile menu" className="md:hidden text-eloisen-green focus:outline-none">
           <Menu className="w-6 h-6" />
         </button>
 
         {/* Desktop Links Left */}
         <div className="hidden md:flex items-center space-x-8 text-sm font-medium tracking-widest uppercase">
-          <a href="#Gallery" className="hover:text-eloisen-gold transition-colors duration-300">Products</a>
-          <a href="#Gallery" className="hover:text-eloisen-gold transition-colors duration-300">Story</a>
+          <a href="#Gallery" aria-label="View Eloisen products" className="hover:text-eloisen-gold transition-colors duration-300">Products</a>
+          <a href="#Gallery" aria-label="Read our story" className="hover:text-eloisen-gold transition-colors duration-300">Story</a>
         </div>
 
         {/* Logo */}
@@ -54,10 +54,10 @@ export default function Navbar() {
         {/* Desktop Links Right & Cart */}
         <div className="flex items-center space-x-8">
           <div className="hidden md:flex space-x-8 text-sm font-medium tracking-widest uppercase">
-            <a href="#experience" className="hover:text-eloisen-gold transition-colors duration-300">Experience</a>
-            <a href="#contact" className="hover:text-eloisen-gold transition-colors duration-300">Contact</a>
+            <a href="#experience" aria-label="Explore the scent experience" className="hover:text-eloisen-gold transition-colors duration-300">Experience</a>
+            <a href="#contact" aria-label="Contact us" className="hover:text-eloisen-gold transition-colors duration-300">Contact</a>
           </div>
-          <button className="flex items-center hover:text-eloisen-gold transition-colors duration-300">
+          <button aria-label="Open shopping cart" className="flex items-center hover:text-eloisen-gold transition-colors duration-300">
             <ShoppingBag className="w-5 h-5 md:w-6 md:h-6" />
           </button>
         </div>

@@ -50,9 +50,11 @@ export default function Hero() {
         className="absolute top-0 left-0 w-full h-full z-0"
       >
         <Image
-          src="/img2.png"
+          src="/img2.webp"
           alt="Eloisen Luxury Candle"
           fill
+          sizes="100vw"
+          quality={90}
           className="object-cover object-center"
           priority
         />
@@ -105,12 +107,14 @@ export default function Hero() {
         >
           <a
             href="#Gallery"
+            aria-label="View our product collection"
             className="flex items-center justify-center min-h-[48px] px-10 bg-white md:bg-[#1E3A34] text-[#1E3A34] md:text-eloisen-cream text-[10px] uppercase tracking-[0.22em] hover:bg-eloisen-cream md:hover:bg-eloisen-gold transition-colors duration-500 min-w-[180px] text-center font-medium shadow-xl md:shadow-none"
           >
             Our Products
           </a>
           <a
             href="#story"
+            aria-label="Read the Eloisen brand story"
             className="flex items-center justify-center min-h-[48px] px-10 border border-white/50 md:border-[#1E3A34]/30 text-white md:text-[#1E3A34] text-[10px] uppercase tracking-[0.22em] hover:bg-white/10 md:hover:bg-[#1E3A34]/5 transition-all duration-500 min-w-[180px] text-center font-medium shadow-md md:shadow-none bg-black/20 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none"
           >
             Explore Story

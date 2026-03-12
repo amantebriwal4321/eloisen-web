@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const storySections = [
   {
-    src: "/g1.jpeg",
+    src: "/g1.webp",
     title: "The Workshop",
     type: "image"
   },
@@ -14,12 +15,12 @@ const storySections = [
     type: "video"
   },
   {
-    src: "/g2.jpeg",
+    src: "/g2.webp",
     title: "Raw Materials",
     type: "image"
   },
   {
-    src: "/img.png",
+    src: "/img.webp",
     title: "The Final Touch",
     type: "image"
   },
@@ -72,9 +73,12 @@ export default function Gallery() {
                   className="w-full h-full object-cover transition-transform duration-[2.5s] ease-out group-hover:scale-110"
                 />
               ) : (
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-[2.5s] ease-out group-hover:scale-110"
-                  style={{ backgroundImage: `url(${item.src})` }}
+                <Image
+                  src={item.src}
+                  alt={item.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center transition-transform duration-[2.5s] ease-out group-hover:scale-110"
                 />
               )}
 

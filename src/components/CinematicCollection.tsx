@@ -129,14 +129,16 @@ export default function CinematicCollection() {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full overflow-hidden text-eloisen-cream bg-black">
+    <section ref={containerRef} className="relative h-screen w-full overflow-hidden text-eloisen-cream bg-black" style={{ willChange: "transform", transform: "translateZ(0)" }}>
 
       {/* Full Width Cinematic Background */}
-      <div className="absolute inset-0 pointer-events-none z-0" ref={imageWrapperRef}>
+      <div className="absolute inset-0 pointer-events-none z-0" ref={imageWrapperRef} style={{ willChange: "transform, filter", transform: "translateZ(0)" }}>
         <Image
-          src="/img2.png"
+          src="/img2.webp"
           alt="Eloisen Candle"
           fill
+          sizes="100vw"
+          quality={90}
           className="object-cover"
           priority
         />

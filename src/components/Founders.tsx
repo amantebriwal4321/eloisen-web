@@ -1,18 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const founders = [
   {
     name: "Rishit Goel",
     role: "Co-Founder",
-    image: "/C01_image.jpeg",
+    image: "/C01_image.webp",
     bio: "Driven by a passion for impeccable design and intentional living, Rishit co-created Eloisen to bring artisanal luxury into everyday spaces.",
   },
   {
     name: "Mitakshi Bhutani",
     role: "Co-Founder",
-    image: "/C02_img.jpeg",
+    image: "/C02_img.webp",
     bio: "With a deep commitment to sustainable luxury, Mitakshi brings the philosophy of conscious craftsmanship to every Eloisen creation.",
   },
 ];
@@ -48,9 +49,12 @@ export default function Founders() {
             >
               {/* Portrait image */}
               <div className="w-full max-w-sm aspect-[3/4] relative overflow-hidden mb-8 shadow-lg">
-                <div
-                  className="w-full h-full bg-cover bg-center bg-no-repeat"
-                  style={{ backgroundImage: `url(${founder.image})` }}
+                <Image
+                  src={founder.image}
+                  alt={founder.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center"
                 />
               </div>
 

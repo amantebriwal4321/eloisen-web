@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function ScentExperience() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -31,9 +32,12 @@ export default function ScentExperience() {
         style={{ scale, opacity }}
         className="absolute inset-0 z-0 origin-center"
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center opacity-40 mix-blend-overlay"
-          style={{ backgroundImage: "url('/imgw.png')" }}
+        <Image
+          src="/imgw.webp"
+          alt="Scent Experience Background"
+          fill
+          sizes="100vw"
+          className="object-cover object-center opacity-40 mix-blend-overlay"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-eloisen-green/90 via-eloisen-green/60 to-eloisen-green/90" />
       </motion.div>

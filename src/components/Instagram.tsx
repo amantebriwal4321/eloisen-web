@@ -5,12 +5,12 @@ import { Instagram as IgIcon } from "lucide-react";
 import Image from "next/image";
 
 const instaImages = [
-  { src: "/so.jpeg", alt: "Eloisen workshop" },
-  { src: "/imgc1 .jpeg", alt: "Raw candle materials" },
-  { src: "imgc2.jpeg", alt: "Signature eloisen candle" },
-  { src: "/img2.png", alt: "The final touch" },
-  { src: "/main_img2.jpeg", alt: "Candle aesthetic" },
-  { src: "/img.png", alt: "Studio moments" },
+  { src: "/so.webp", alt: "Eloisen workshop" },
+  { src: "/imgc1 .webp", alt: "Raw candle materials" },
+  { src: "imgc2.webp", alt: "Signature eloisen candle" },
+  { src: "/img2.webp", alt: "The final touch" },
+  { src: "/main_img2.webp", alt: "Candle aesthetic" },
+  { src: "/img.webp", alt: "Studio moments" },
 ];
 
 const InstagramCTA = () => (
@@ -18,6 +18,7 @@ const InstagramCTA = () => (
     href="https://instagram.com/eloisencandles"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="Follow Eloisen on Instagram"
     className="inline-flex items-center justify-center px-10 py-5 bg-eloisen-green text-white uppercase tracking-[0.2em] text-xs font-bold hover:bg-eloisen-gold transition-all duration-500 shadow-xl hover:scale-105 active:scale-95"
   >
     Follow on Instagram
@@ -82,7 +83,7 @@ export default function Instagram() {
                     src={image.src}
                     alt={image.alt}
                     fill
-                    unoptimized
+                    sizes="(max-width: 768px) 50vw, 33vw"
                     priority={index < 3}
                     className="object-cover transition-transform duration-1000 group-hover:scale-110"
                   />

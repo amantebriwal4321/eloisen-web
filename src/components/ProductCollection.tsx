@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 const products = [
   {
@@ -10,7 +11,7 @@ const products = [
     size: "100ml",
     burnTime: "25+ hours",
     description: "A delicate balance of warmth and earthiness, anchoring your space in pure serenity.",
-    image: "/C01_image.jpeg"
+    image: "/C01_image.webp"
   },
   {
     id: 2,
@@ -18,7 +19,7 @@ const products = [
     size: "130ml",
     burnTime: "40+ hours",
     description: "Deep, mysterious, and captivating. Designed for long evenings of reflection.",
-    image: "/C02_img.jpeg"
+    image: "/C02_img.webp"
   },
   {
     id: 3,
@@ -26,7 +27,7 @@ const products = [
     size: "100ml",
     burnTime: "25+ hours",
     description: "A fresh, blooming bouquet of wild roses kissed by morning dew.",
-    image: "/main_img2.jpeg"
+    image: "/main_img2.webp"
   },
   {
     id: 4,
@@ -34,7 +35,7 @@ const products = [
     size: "200ml",
     burnTime: "60+ hours",
     description: "Rich sandalwood mixed with subtle spice to ground your living room.",
-    image: "/Main_image.png"
+    image: "/Main_image.webp"
   }
 ];
 
@@ -71,9 +72,12 @@ export default function ProductCollection() {
             >
               {/* Product Image */}
               <div className="relative w-full h-[500px] overflow-hidden bg-eloisen-cream mb-6">
-                <div
-                  className="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-110"
-                  style={{ backgroundImage: `url(${product.image})` }}
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover object-center transition-transform duration-1000 group-hover:scale-110"
                 />
                 {/* Hover overlay for 'View Product' */}
                 <div className="absolute inset-0 bg-eloisen-green/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center backdrop-blur-[2px]">
