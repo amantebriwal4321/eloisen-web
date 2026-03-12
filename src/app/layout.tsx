@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from '@vercel/analytics/react'
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -49,15 +50,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${playfair.variable} ${inter.variable} antialiased font-sans bg-eloisen-cream text-eloisen-green`}
-      >
+      <body>
         {children}
+        <Analytics />
       </body>
     </html>
   );
