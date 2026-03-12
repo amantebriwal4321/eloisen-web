@@ -13,8 +13,38 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Eloisen — The Art of Luxury Scented Candles",
-  description: "Hand-poured luxury scented candles designed to create calming, elegant, and memorable home experiences.",
+  title: "Eloisen | Luxury Scented Candles",
+  description: "Eloisen creates luxury scented candles crafted to elevate your living space with refined fragrance and timeless design.",
+  metadataBase: new URL("https://eloisen.com"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Eloisen | Luxury Scented Candles",
+    description: "Eloisen creates luxury scented candles crafted to elevate your living space with refined fragrance and timeless design.",
+    url: "https://eloisen.com",
+    siteName: "Eloisen",
+    images: [
+      {
+        url: "/preview.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Eloisen Luxury Scented Candles preview",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eloisen | Luxury Scented Candles",
+    description: "Eloisen creates luxury scented candles crafted to elevate your living space with refined fragrance and timeless design.",
+    images: ["/preview.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({
